@@ -8,13 +8,15 @@ from os import getcwd, path, walk
 def main(path):
     """Summarize the contents of a given directory."""
     print('Reading files...')
-    summary = {}
-    # Build a nested dictionary that represents the given directory.
+    summary = {'name': [],
+               'size': [],
+               'file_count': [],
+               'subdirectories' []}
     for directory, subdirectories, files in walk(top='resources/'):
-        print(f'Found directory: {directory}')
-        print(f'Found subdirectories: {subdirectories}')
-        print(f'Found files in directory: {files}')
-        print('\n\n')
+        summary['name'].append(directory)
+        summary['size'].append(path.getsize(directory))
+        summary['file_count'].append(len(files))
+        summary['subdirectories'].append(', '.join([directory for directory in subdirectories]))
 
 
 if __name__ == '__main__':
