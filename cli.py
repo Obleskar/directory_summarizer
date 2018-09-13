@@ -4,8 +4,8 @@ from os import getcwd, path, walk
 
 
 @click.command()
-@click.option('--path', '-p', help='The path of the directory to be summarized..')
-def main(path):
+@click.option('--target_path', '-tp', help='The path of the directory to be summarized..')
+def main(target_path):
     """Summarize the contents of a given directory."""
     print('Reading files...')
     summary = {'name': [],
