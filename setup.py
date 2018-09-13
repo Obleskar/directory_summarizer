@@ -11,7 +11,7 @@ setuptools.setup(
     description="Command line package for generating directory tree summaries with file counts.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/pypa/sampleproject",
+    url="git@gitlab.com:Obleskar/directory_summarizer.git",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
