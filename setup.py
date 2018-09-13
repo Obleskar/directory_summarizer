@@ -9,6 +9,11 @@ setuptools.setup(
     author="Benjamin Deuson",
     author_email="benjamindeuson@gmail.com",
     description="Command line package for generating directory tree summaries with file counts.",
+    entry_points = {
+        'console_scripts': [
+            'directory_summarizer=directory_summarizer.__main__:main',
+        ],
+    },
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="git@gitlab.com:Obleskar/directory_summarizer.git",
@@ -19,3 +24,4 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
 )
+
