@@ -26,12 +26,9 @@ def main(target_path):
         summary['file_count'].append(len(files))
         summary['subdirectories'].append(', '.join([directory for directory in subdirs]))
     summary['size'] = [sizeof_fmt(size) for size in summary['size']]
-    print('Summary:')
-    pprint(summary)
     dataframe = DataFrame(data=summary)
     with open('summary.csv', 'w') as outfile:
         dataframe.to_csv(outfile, index=False)
-    print(dataframe)
 
 
 def sizeof_fmt(num, suffix='B'):
