@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import click
+from os import walk
 
 
 @click.command()
