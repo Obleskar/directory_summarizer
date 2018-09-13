@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import click
 from os import getcwd, path, walk
+from pprint import pprint
 
 
 @click.command()
@@ -23,7 +24,7 @@ def main(target_path):
         summary['file_count'].append(len(files))
         summary['subdirectories'].append(', '.join([directory for directory in subdirectories]))
     print('Summary:')
-    print(summary)
+    pprint(summary)
 
 
 if __name__ == '__main__':
