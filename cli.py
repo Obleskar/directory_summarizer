@@ -11,7 +11,7 @@ def main(path):
     summary = {'name': [],
                'size': [],
                'file_count': [],
-               'subdirectories' []}
+               'subdirectories': []}
     for directory, subdirectories, files in walk(top='resources/'):
         summary['name'].append(directory)
         summary['size'].append(path.getsize(directory))
