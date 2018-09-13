@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import click
-from os import getcwd, path, walk
+from os import path, walk
 from pandas import DataFrame
 from pprint import pprint
 
