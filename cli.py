@@ -15,7 +15,7 @@ def main(target_path):
                'file_count': [],
                'subdirectories': []}
     dir_sizes = {}
-    for directory_path, subdirs, files in walk(top='resources/', topdown=False):
+    for directory_path, subdirs, files in walk(top=target_path, topdown=False):
         size_files = sum(size for size in [path.getsize(file_path)
                                                for file_path in [path.join(directory_path, file_name)
                                                             for file_name in files]])
