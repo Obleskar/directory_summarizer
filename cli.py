@@ -43,7 +43,7 @@ def main(target_path):
     # Use the dataframe to write the directory summary to a CSV file.
     with open(path.join('output', 'summary.csv'), 'w') as outfile:
         dataframe.to_csv(outfile, index=False)
-    print('Your file\'s ready. Look for \"summary.csv\" in the current folder.')
+    print('Your file\'s ready. Look for \"summary.csv\" in the "output" folder.')
 
 
 def sizeof_fmt(num, suffix='B'):
