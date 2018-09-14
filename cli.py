@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import click
-from os import path, walk
+from os import makedirs, path, walk
 from pandas import DataFrame
 from pprint import pprint
 
@@ -9,6 +9,9 @@ from pprint import pprint
 @click.option('--target_path', '-p', help='The path of the directory to be summarized.')
 def main(target_path):
     """Summarize the contents of a given directory."""
+    print('Verifying internal directory structure.')
+    if not path.isdir('output'):
+        makedirs('output')
     print('Reading directory.')
     summary = {'name': [],
                'size': [],
