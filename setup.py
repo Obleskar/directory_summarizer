@@ -10,7 +10,7 @@ setuptools.setup(
     author="Benjamin Deuson",
     author_email="benjamindeuson@gmail.com",
     description="Command line package for generating directory tree summaries with file counts.",
-    entry_points = {
+    entry_points={
         'console_scripts': [
             'directory_summarizer=directory_summarizer.__main__:main',
         ],
