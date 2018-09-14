@@ -38,7 +38,7 @@ def main(target_path):
     dataframe = DataFrame(data=summary)
     print('Writing results to CSV file.')
     # Use the dataframe to write the directory summary to a CSV file.
-    with open('summary.csv', 'w') as outfile:
+    with open(path.join('output', 'summary.csv'), 'w') as outfile:
         dataframe.to_csv(outfile, index=False)
     print('Your file\'s ready. Look for \"summary.csv\" in the current folder.')
 
