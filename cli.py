@@ -7,7 +7,8 @@ from pprint import pprint
 
 @click.command()
 @click.option('--directory_path', '-p', help='The path of the directory to be summarized.')
-def main(directory_path):
+@click.option('--output_path', '-o', help='Path to where the summary results file should be saved.')
+def main(directory_path, output_path):
     """Summarize the contents of a given directory."""
     print('Verifying internal directory structure.')
     if not path.isdir('output'):
