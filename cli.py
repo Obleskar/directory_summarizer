@@ -6,8 +6,8 @@ from pprint import pprint
 
 
 @click.command()
-@click.option('--target_path', '-p', help='The path of the directory to be summarized.')
-def main(target_path):
+@click.option('--directory_path', '-p', help='The path of the directory to be summarized.')
+def main(directory_path):
     """Summarize the contents of a given directory."""
     print('Verifying internal directory structure.')
     if not path.isdir('output'):
@@ -20,7 +20,7 @@ def main(target_path):
     # Store each subdirectory's size in a dictionary keyed to the subdirectory's name.
     dir_sizes = {}
     # Traverse the directory tree from the bottom to the top.
-    for directory_path, subdirs, files in walk(top=target_path, topdown=False):
+    for directory_path, subdirs, files in walk(top=directory_path, topdown=False):
         # Get total size of all (non-directory) files in the current directory.
         size_files = sum(size for size in [path.getsize(file_path)
                                            for file_path in [path.join(directory_path, file_name)
