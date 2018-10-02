@@ -10,9 +10,6 @@ from pprint import pprint
 @click.option('--output_path', '-o', help='Path to where the summary results file should be saved.')
 def main(directory_path, output_path):
     """Summarize the contents of a given directory."""
-    print('Verifying internal directory structure.')
-    if not path.isdir('output'):
-        makedirs('output')
     print('Reading directory.')
     summary = {'name': [],
                'size': [],
@@ -42,7 +39,7 @@ def main(directory_path, output_path):
     dataframe = DataFrame(data=summary)
     print('Writing results to CSV file.')
     # Use the dataframe to write the directory summary to a CSV file.
-    with open(path.join('output', 'summary.csv'), 'w') as outfile:
+    with open(path.join(output_path, 'summary.csv'), 'w') as outfile:
         dataframe.to_csv(outfile, index=False)
     print('Your file\'s ready. Look for \"summary.csv\" in the "output" folder.')
 
