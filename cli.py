@@ -8,6 +8,7 @@ from pprint import pprint
 @click.command()
 @click.option('--directory_path', '-p', help='The path of the directory to be summarized.')
 @click.option('--output_path', '-o', help='Path to where the summary results file should be saved.')
+@click.option('--dry_run', '-n', help='Preview program output without generating an output file.')
 def main(directory_path, output_path):
     """Summarize the contents of a given directory."""
     print('Reading directory.')
