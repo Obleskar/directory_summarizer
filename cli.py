@@ -38,6 +38,8 @@ def main(directory_path, output_path):
     # Convert the summary into a dataframe.
     print('Building spreadsheet.')
     dataframe = DataFrame(data=summary)
+    if dry_run:
+        print(f'Dataframe preview:\n{dataframe.head()}')
     print('Writing results to CSV file.')
     # Use the dataframe to write the directory summary to a CSV file.
     with open(path.join(output_path, 'summary.csv'), 'w') as outfile:
