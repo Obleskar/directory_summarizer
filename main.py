@@ -1,6 +1,5 @@
-from os import makedirs, path, walk
+from os import path, walk
 from pandas import DataFrame
-from pprint import pprint
 
 
 def main(directory_path, output_path, dry_run):
