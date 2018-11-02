@@ -2,7 +2,7 @@ from os import path, walk
 from pandas import DataFrame
 
 
-def main(directory_path, output_path, dry_run):
+def summarize(directory_path, output_path, dry_run):
     """Summarize the contents of a given directory."""
     print('Reading directory.')
     summary = {'name': [],
