@@ -15,4 +15,3 @@ Make a summary.csv file of the current directory:
 Show a preview of the summary.csv file would look like:
 
     python cli.py -p . -o . -n
-
