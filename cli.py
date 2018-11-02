@@ -1,7 +1,4 @@
 from click import command, option
-from os import makedirs, path, walk
-from pandas import DataFrame
-from pprint import pprint
 
 
 @command()
