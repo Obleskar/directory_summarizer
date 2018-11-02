@@ -40,11 +40,14 @@ def main(directory_path, output_path, dry_run):
     dataframe = DataFrame(data=summary)
     if dry_run:
         print(f'Dataframe preview:\n{dataframe.head()}')
-    print('Writing results to CSV file.')
-    # Use the dataframe to write the directory summary to a CSV file.
-    with open(path.join(output_path, 'summary.csv'), 'w') as outfile:
-        dataframe.to_csv(outfile, index=False)
-    print('Your file\'s ready. Look for \"summary.csv\" in the "output" folder.')
+        print('This was a dry run. If you\'re pleased with the output above, '
+              'then run the same command again without the "-n" option.')
+    else:
+        print('Writing results to CSV file.')
+        # Use the dataframe to write the directory summary to a CSV file.
+        with open(path.join(output_path, 'summary.csv'), 'w') as outfile:
+            dataframe.to_csv(outfile, index=False)
+        print('Your file\'s ready. Look for \"summary.csv\" in the "output" folder.')
 
 
 def sizeof_fmt(num, suffix='B'):
