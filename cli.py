@@ -1,6 +1,6 @@
 from click import command, option
 
-from main import summarize
+from main import summarize, get_ext_breakdown
 
 
 @command()
@@ -10,7 +10,7 @@ from main import summarize
 def get_summary(directory_path, output_path, dry_run):
     """Get a summary of the provided directory."""
     summarize(directory_path=directory_path, output_path=output_path, dry_run=dry_run)
-    
+
 
 if __name__ == '__main__':
     get_summary()

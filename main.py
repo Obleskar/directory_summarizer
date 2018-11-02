@@ -43,6 +43,14 @@ def summarize(directory_path, output_path, dry_run):
         print('Your file\'s ready. Look for \"summary.csv\" in the "output" folder.')
 
 
+def get_ext_breakdown(directory_path='.'):
+    """Summarize the unique file extensions and the number of times they appear in the provided directory."""
+    filenames = set()
+    for dir_path, subdirs, files in walk_directory(path_to_dir=directory_path):
+       for filename in files:
+           filenames.add(filename)
+    print(f'Filenames: {filenames}')
+
 def walk_directory(path_to_dir):
     """Traverse the directory tree from the bottom to the top."""
     for directory_path, subdirs, files in walk(top=path_to_dir, topdown=False):
