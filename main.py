@@ -3,7 +3,7 @@ from pandas import DataFrame
 
 
 def summarize(directory_path, output_path, dry_run):
-    """Summarize the contents of a given directory."""
+    """Summarize the contents of the provided directory."""
     print('Reading directory.')
     summary = {'name': [],
                'size': [],
